@@ -19,7 +19,7 @@ const Login = () => {
     try {
       const config = { headers: { 'Content-Type': 'application/json' } };
       const body = JSON.stringify({ username, password });
-      const res = await axios.post('http://localhost:5000/api/auth/login', body, config);
+      const res = await axios.post('https://client-ncio.onrender.com/api/auth/login', body, config);
 
       // Store token in local storage
       localStorage.setItem('token', res.data.token);

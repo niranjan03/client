@@ -25,7 +25,7 @@ const Signup = () => {
     try {
       const config = { headers: { 'Content-Type': 'application/json' } };
       const body = JSON.stringify({ username, email, password });
-      await axios.post('http://localhost:5000/api/auth/signup', body, config);
+      await axios.post('https://client-ncio.onrender.com/api/auth/signup', body, config);
 
       // Handle successful signup, e.g., redirect to login page
       alert('Signup successful. Please login.');
